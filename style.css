@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, 'sans-serif';
+}
+
+:root{
+    --background: #252734;
+    --light-bg: #333646;
+    --lightyellow: rgb(255, 194, 92);
+    --yellow: #FFAF29;
+    --white:rgb(216, 217, 218);
+    --transistion-175ms: all 175ms ease-in-out;
+    --transistion-275ms: all 275ms ease-in-out;
+    --transistion-375ms: all 375ms ease-in-out;
+}
+.navbar {
+    height: 4rem;
+    position: relative;
+    margin: 0 10% ;
+    background-color: var(--background);
+    border-bottom: solid 1px rgb(216, 217, 218, 0.3);
+}
+
+.nav-link.active,
+.nav-link:hover,
+.nav-link:active{
+    color: var(--yellow) !important;
+
+}
+.nav-item .nav-link{
+    color: rgb(230, 230, 230, .3);
+}
+.navbar-brand img{
+    width: 50px;
+}
+.navbar-toggler-icon{
+    color: var(--white);
+}
+
+.navbar-brand{
+    left: 0;
+}
+main{
+    background-color: var(--background);
+    z-index: -22;
+}
+
+.bars{
+    top: 1.3rem;
+    right: 1rem;
+}
+
+.logos{
+    height: 3rem;
+}
+.nav-logo{
+    top:.5rem;
+    left:2rem;
+}
+.nav-item:last-child{
+    right: 2rem;
+}
+.nav-item:last-child .nav-link{
+    border: solid 2px var(--white);
+    color: var(--white);
+    font-size: .8rem;
+}
+.nav-item:last-child .nav-link:hover{
+    border-color: var(--yellow);
+}
+
+.nav-item:last-child .nav-link.active{
+    border-color: var(--yellow) !important;
+}
+
+#hero, #about, #resume, #portfolio, #contact{
+    padding-top: 4rem;
+    display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar-nav{
+        height: 0 !important;
+        display: none !important;
+        transition: height 1s ease !important;
+    }
+
+    .navbar {
+        height: 4rem;
+        position: relative;
+        margin: 0;
+        background-color: var(--background);
+
+    }
+
+    .nav-logo{
+        left:1rem;
+    }
+
+    .expanded{
+        margin-top: calc(5rem - 8px);
+        height: 50vh !important;
+        width: 100vw;
+        background: var(--background);
+        padding: 3rem 0;
+        display: flex !important;
+    }
+}
+/* Hero Style */
+#hero{
+    justify-content: center;
+    color: var(--white);
+}
+
+
+
+.hero-container{
+    border: 1px solid white;
+    padding: 20px;
+    width: 50%;
+}
+.hero-wrapper{
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+.profile{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: solid .4rem var(--light-bg);
+}
+.profile-frame{
+    padding: 5px;
+    border-radius: 50%;
+    border: solid 2px var(--lightyellow);
+}
+
+.hero-wrapper h1 {
+        font-size: 3rem;
+        background: -webkit-linear-gradient(90deg, var(--lightyellow) 30%, rgba(37,39,52,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 600;
+}
+
+
+
+@keyframes typing {
+    from {
+    width: 0;
+    }
+    to {
+    width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.text-area{
+    display: flex;
+    border:solid 1px white;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.text-area .name, .greet{
+    margin: 0 !important;
+}
+
+.description{
+    color: var(--light-bg);
+    font-size: 1.2rem !important;
+}
+#typer{
+    color: var(--yellow);
+}
+
+.myworks{
+    text-align: center;
+    text-decoration: none !important;
+    height: 40px;
+    border: 1px solid white;
+    width: 150px;
+}
+
+.btn-one {
+    color: var(--white) !important;
+    transition: all 0.3s;
+    position: relative
+
+  }
+  .btn-one span {
+    transition: all 0.3s;
+  }
+  .btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+  }
+  .btn-one:hover span {
+    letter-spacing: 2px;
+  }
+  .btn-one:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+  }
+  .btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgb(255, 194, 95,.1);
+  }
+  .btn-one:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+  }
+
+
+
+
+
