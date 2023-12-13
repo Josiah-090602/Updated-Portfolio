@@ -120,8 +120,10 @@ main{
 
 .hero-container{
     border: 1px solid white;
-    padding: 20px;
-    width: 50%;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .hero-wrapper{
     border: 1px solid white;
@@ -130,6 +132,7 @@ main{
     align-items: center;
     height: 100%;
     justify-content: center;
+    width: 50%;
 }
 .profile{
     height: 150px;
