@@ -20,10 +20,6 @@
   --transistion-375ms: all 375ms ease-in-out;
 }
 
-body {
-  color: var(--text-gray);
-}
-
 .navbar {
   height: 4rem;
   position: relative;
@@ -34,6 +30,7 @@ body {
 .nav-item .nav-link {
   color: var(--text-gray) !important;
   font-size: 0.9rem !important;
+  transition: var(--transistion-175ms);
 }
 .nav-link.active,
 .nav-link:hover,
@@ -54,8 +51,9 @@ main {
   z-index: -22;
 }
 .bars {
-  top: 1.3rem;
   right: 1rem;
+  height: 2rem;
+  top: 1rem;
 }
 .logos {
   height: 3rem;
@@ -68,15 +66,14 @@ main {
   right: 2rem;
 }
 .nav-item:last-child .nav-link {
-  border: solid 1px var(--text-gray);
-  color: var(--white);
+  border: solid 1px var(--white);
+  color: var(--white) !important;
   font-size: 0.8rem;
 }
-.nav-item:last-child .nav-link:hover {
-  border-color: var(--yellow);
-}
+.nav-item:last-child .nav-link:hover,
 .nav-item:last-child .nav-link.active {
-  border-color: var(--yellow) !important;
+  border-color: var(--yellow);
+  color: var(--yellow) !important;
 }
 #hero,
 #about,
@@ -94,7 +91,6 @@ main {
   color: var(--white);
 }
 .hero-container {
-  padding: 10px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -105,7 +101,7 @@ main {
   align-items: center;
   height: 100%;
   justify-content: center;
-  width: 50%;
+  margin-top: -2rem;
 }
 .profile {
   height: 150px;
@@ -154,6 +150,9 @@ main {
   letter-spacing: 1px;
   background-color: var(--lightyellow) !important;
   font-size: 0.9rem !important;
+}
+.my-works:active {
+  border-color: transparent !important;
 }
 .my-works:hover {
   letter-spacing: 2px;
