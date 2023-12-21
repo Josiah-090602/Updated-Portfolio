@@ -21,12 +21,16 @@ const removeActiveClasses = () => {
 
 // navbar mobile responsive
 
-bars.addEventListener("click", () => {
-  if (navbar.classList.contains('expanded')) {
-    navbar.classList.remove('expanded')
-  } else {
-    contactLink.classList.remove('position-absolute')
-    navbar.classList.add('expanded')
+bars.addEventListener("click", e => {
+  navbar.classList.toggle('expanded')
+})
+
+// minimize the navbar when clicked outside
+document.addEventListener('click', e => {
+  const isClickedInsideNavbar = navbar.contains(e.target) || bars.contains(e.target);
+
+  if (!isClickedInsideNavbar && navbar.classList.contains('expanded')) {
+    navbar.classList.remove('expanded');
   }
 })
 
