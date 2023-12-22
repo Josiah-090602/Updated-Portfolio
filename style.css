@@ -15,18 +15,24 @@
   --lightyellow: rgb(255, 194, 92);
   --yellow: #ffaf29;
   --white: rgb(216, 217, 218);
+  --navbar-height: 5rem;
   --transistion-175ms: all 175ms ease-in-out;
   --transistion-275ms: all 275ms ease-in-out;
   --transistion-375ms: all 375ms ease-in-out;
 }
 
 .navbar {
-  height: 4rem;
+  height: var(--navbar-height);
   position: relative;
-  margin: 0 10%;
   background-color: var(--background);
-  border-bottom: solid 1px var(--border-color);
 }
+
+.scrolled {
+  background-color: rgba(37, 39, 52, 0.8);
+  backdrop-filter: blur(5px);
+  box-shadow: 1px 1px 2px rgba(3, 7, 25, 0.1);
+}
+
 .nav-item .nav-link {
   color: var(--text-gray) !important;
   font-size: 0.9rem !important;
@@ -38,35 +44,34 @@
 .nav-link:active {
   color: var(--yellow) !important;
 }
-.navbar-brand img {
-  width: 50px;
-}
+
 .navbar-toggler-icon {
   color: var(--white);
 }
-.navbar-brand {
-  left: 0;
-}
+
 main {
   background-color: var(--background);
   z-index: -22;
 }
+
 .bars {
   right: 1rem;
   height: 2rem;
-  top: 1rem;
+  top: 1.5rem;
 }
+
 .logos {
   height: 3rem;
 }
+
 .nav-logo {
-  top: 0.5rem;
-  left: 2rem;
+  top: 1rem;
+  left: 10vw;
 }
 
 .nav-item:last-child {
   position: absolute;
-  right: 2rem;
+  right: 10vw;
 }
 
 .nav-item:last-child .nav-link {
@@ -74,18 +79,21 @@ main {
   color: var(--white) !important;
   font-size: 0.8rem;
 }
+
 .nav-item:last-child .nav-link:hover,
 .nav-item:last-child .nav-link.active {
   border-color: var(--yellow);
   color: var(--yellow) !important;
 }
+
 #hero,
 #about,
 #resume,
 #portfolio,
 #contact {
-  padding-top: 4rem;
+  padding-top: var(--navbar-height);
   display: flex;
+  color: var(--white) !important;
 }
 
 /* Hero Style */
@@ -94,11 +102,13 @@ main {
   justify-content: center;
   color: var(--white);
 }
+
 .hero-container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
 .hero-wrapper {
   display: flex;
   flex-direction: column;
@@ -107,17 +117,20 @@ main {
   justify-content: center;
   margin-top: -2rem;
 }
+
 .profile {
   height: 150px;
   width: 150px;
   border-radius: 50%;
   border: solid 0.4rem var(--light-bg);
 }
+
 .profile-frame {
   padding: 5px;
   border-radius: 50%;
   border: solid 2px var(--lightyellow);
 }
+
 .hero-wrapper h1 {
   font-size: 3rem;
   background: -webkit-linear-gradient(
@@ -129,6 +142,7 @@ main {
   -webkit-text-fill-color: transparent;
   font-weight: 600;
 }
+
 .text-area {
   display: flex;
   justify-content: center;
@@ -136,36 +150,43 @@ main {
   align-items: center;
   margin: 20px 0;
 }
+
 .text-area .name,
 .greet {
   margin: 0 !important;
 }
+
 .description {
   color: var(--light-bg);
   font-size: 1.2rem !important;
 }
+
 #typer {
   color: var(--yellow);
 }
-.my-works {
+
+.my-cv {
   color: var(--background) !important;
   position: relative;
   transition: var(--transistion-275ms) !important;
   letter-spacing: 1px;
   background-color: var(--lightyellow) !important;
-  font-size: 0.9rem !important;
+  font-size: 0.85rem !important;
 }
-.my-works:active {
+
+.my-cv:active {
   border-color: transparent !important;
 }
-.my-works:hover {
+
+.my-cv:hover {
   letter-spacing: 2px;
   padding-left: 0 !important;
   padding-right: 0 !important;
   background-color: transparent !important;
   color: var(--white) !important;
 }
-.my-works::before {
+
+.my-cv::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -179,11 +200,49 @@ main {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   transform: scale(0.1, 1);
 }
-.my-works:hover::before {
+
+.my-cv:hover::before {
   opacity: 1;
   width: 10rem;
   left: calc(50% - 5rem);
   transform: scale(1, 1);
+}
+
+.media-accounts {
+  bottom: 3rem;
+  left: 10vw;
+}
+
+.media-accounts a {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  justify-content: center;
+  transition: var(--transistion-275ms);
+  cursor: pointer;
+  color: var(--text-gray);
+  text-decoration: none !important;
+}
+
+.media-accounts a:hover {
+  border-color: var(--lightyellow);
+  color: var(--lightyellow);
+}
+
+.media-accounts::before {
+  content: "";
+  position: absolute;
+  bottom: -3rem;
+  width: 0.5px;
+  height: 2rem;
+  background-color: var(--text-gray);
+}
+
+.media-accounts:hover::before {
+  background-color: var(--lightyellow);
 }
 
 /* Keyframes */
@@ -192,6 +251,7 @@ main {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
@@ -202,6 +262,7 @@ main {
   to {
     opacity: 0;
   }
+
   50% {
     opacity: 0.5;
   }
@@ -216,26 +277,30 @@ main {
     height: 0;
     overflow: hidden;
     left: 0;
-    top: calc(4rem - 2px);
+    top: calc(var(--navbar-height) - 2px);
     position: absolute;
     width: 100%;
   }
+
   .expanded {
     height: 50vh;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
   }
+
   .nav-item:last-child .nav-link {
     position: relative !important;
   }
+
   .navbar {
-    height: 4rem;
     position: relative;
     margin: 0;
     background-color: var(--background);
   }
+
   .nav-logo {
     left: 1rem;
   }
+
   .name {
     font-size: 2.2rem !important;
   }

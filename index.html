@@ -50,7 +50,7 @@
       <main data-bs-spy="scroll" data-bs-target="#navigation" class="scrollspy-example" data-bs-offset="0" tabindex="0">
         <!-- Hero Sectio -->
         <section id="hero" class="min-vh-100 ">
-            <div class="hero-container">
+            <div class="hero-container position-relative">
               <div class="hero-wrapper">
                 <div class="profile-frame">
                     <img class="profile" src="img/Profile.png" alt="">
@@ -60,10 +60,15 @@
                   <h1 class="name">Josiah Viernes</h2>
                   <p class="description">--<< <span id="typer"> </span> >>--</p>
                   <span id="cursor"></span>
-                  </div>
-                  <a class="btn fw-medium rounded-0 px-5 py-2 my-works" href="#portfolio">
-                    My Works
-                  </a>
+                </div>
+                <a href="mycv/mycv.pdf" class="btn fw-medium rounded-0 px-4 py-2 my-cv" tabindex="0" aria-selected="true" aria-controls="page" target="_blank" rel="noopener noreferrer">
+                  Download CV
+                </a>
+              </div>
+              <div class="media-accounts position-absolute d-flex align-items-center justify-content-center flex-column gap-1">
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
               </div>
             </div>
         </section>
