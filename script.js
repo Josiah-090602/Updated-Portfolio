@@ -13,25 +13,9 @@ document.addEventListener('scroll', () => {
   }
 })
 
-// nav-links
-
-navLink.forEach(nav => {
-  nav.addEventListener("click", e => {
-    removeActiveClasses()
-    nav.classList.add('active')
-  })
-})
-
-const removeActiveClasses = () => {
-  navLink.forEach(nav => {
-    nav.classList.remove('active')
-  })
-}
-
-// navbar mobile responsive
-
-bars.addEventListener("click", e => {
+bars.addEventListener("click", () => {
   navbar.classList.toggle('expanded')
+  bars.classList.toggle('active')
 })
 
 // minimize the navbar when clicked outside
@@ -40,6 +24,7 @@ document.addEventListener('click', e => {
 
   if (!isClickedInsideNavbar && navbar.classList.contains('expanded')) {
     navbar.classList.remove('expanded');
+    bars.classList.remove('active')
   }
 })
 
@@ -118,17 +103,34 @@ function smoothScroll(target, duration) {
   requestAnimationFrame(animation);
 }
 
-const navLinks = document.querySelectorAll('.nav-link');
+// nav-links
 
-navLinks.forEach((link) => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
+navLink.forEach((link) => {
+  link.addEventListener('click', () => {
+    removeActiveClasses()
+    nav.classList.add('active')
+    navbar.classList.remove('expanded')
+    bars.classList.remove('active')
+  })
+})
+
+const scrollLinks = document.querySelectorAll(['.nav-link', '.my-projects'])
+
+// scroll links
+
+scrollLinks.forEach((link) => {
+  link.addEventListener('click', () => {
     const target = link.getAttribute('href');
     const duration = 400;
     smoothScroll(target, duration);
   });
 });
 
+const removeActiveClasses = () => {
+  navLink.forEach(nav => {
+    nav.classList.remove('active')
+  })
+}
 
 
 
