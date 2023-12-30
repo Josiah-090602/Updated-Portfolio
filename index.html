@@ -52,8 +52,8 @@
       </nav>
 
       <main data-bs-spy="scroll" data-bs-target="#navigation" class="scrollspy-example" data-bs-offset="0" tabindex="0">
-        <!-- Hero Sectio -->
-        <section id="hero" class="min-vh-100 ">
+        <!-- Hero Section -->
+        <section id="hero" class="min-vh-100 m-0">
             <div class="hero-container position-relative d-flex align-items-center justify-content-center">
               <div class="hero-wrapper">
                 <div class="profile-frame">
@@ -62,10 +62,18 @@
                 <div class="text-area">
                   <p class="greet" >Hello there! I'm</p>
                   <h1 class="name">Josiah Viernes</h2>
-                  <p class="description">--<< <span id="typer"> </span> >>--</p>
+                  <div class="description gap-2 d-flex align-items-center justify-content-center">
+                    <span class="material-symbols-outlined">
+                      code
+                    </span>
+                    <span id="typer"> </span>
+                    <span class="material-symbols-outlined">
+                      code_off
+                    </span>
+                  </div>
                   <span id="cursor"></span>
                 </div>
-                <a href="mycv/mycv.pdf" class="btn fw-medium rounded-0 px-4 py-2 my-cv" tabindex="0" aria-selected="true" aria-controls="page" target="_blank" rel="noopener noreferrer">
+                <a href="mycv/mycv.pdf" class="btn fw-medium rounded-0 px-4 py-2 mt-4 my-cv" tabindex="0" aria-selected="true" aria-controls="page" target="_blank" rel="noopener noreferrer">
                   Download CV
                 </a>
               </div>
@@ -90,7 +98,44 @@
         <!-- About Section -->
         <section id="about" class="page-section min-vh-100">About</section>
         <!-- Resume Section -->
-        <section id="resume" class="page-section min-vh-100">Resume</section>
+        <section id="resume" class="page-section d-flex flex-column min-vh-100">
+          <div class="education py-4 w-100">
+            <p class="header-title fs-5 mb-5 fw-medium">MY EDUCATION</p>
+            <div class="education-content py-4 d-flex gap-4 flex-column w-100">
+              <div class="education-item px-4 d-flex justify-content-md-between justify-content-center align-items-start align-items-md-center flex-md-row flex-column">
+                <div class="flex flex-column">
+                  <p class="mb-2 fs-7">JUNIOR HIGH SCHOOL</p>
+                  <h6 class="text-lightyellow">COMPUTER SYSTEM SERVICING</h6>
+                  <p class="m-lg-0 mb-2 text-gray">Bulan National High School</p>
+                </div>
+                <span>2016 - 2018</span>
+              </div>
+              <div class="education-item px-4 d-flex justify-content-md-between justify-content-center align-items-start align-items-md-center flex-md-row flex-column">
+                <div class="flex flex-column">
+                  <p class="mb-2 fs-7">SENIOR HIGH SCHOOL</p>
+                  <h6 class="text-lightyellow">COMPUTER SYSTEM SERVICING</h6>
+                  <p class="m-lg-0 mb-2 text-gray">Bulan National High School</p>
+                </div>
+                <span>2018 - 2020</span>
+              </div>
+              <div class="education-item px-4 d-flex justify-content-md-between justify-content-center align-items-start align-items-md-center flex-md-row flex-column">
+                <div class="flex flex-column">
+                  <p class="mb-2 fs-7">COLLEGE</p>
+                  <h6 class="text-lightyellow">BS IN INFORMATION TECHNOLOGY</h6>
+                  <p class="m-lg-0 mb-2 text-gray">Sorsogon State University - Bulan Campus</p>
+                </div>
+                <span>2020 - 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills py-4">
+            <p class="header-title fs-5 mb-5 fw-medium">WHAT I KNOW</p>
+            <div class="">
+
+            </div>
+          </div>
+        </section>
         <!-- Portfolio Section -->
         <section id="portfolio" class="page-section min-vh-100">Portfolio</section>
         <!-- Contact Section -->
