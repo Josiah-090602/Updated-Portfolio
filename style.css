@@ -196,11 +196,11 @@ main {
 }
 
 #typer {
-  color: var(--lightyellow);
+  color: var(--white);
   font-size: 1.2rem;
 }
 
-.my-cv {
+.animated-btn {
   color: var(--background) !important;
   position: relative;
   transition: var(--transistion-275ms) !important;
@@ -209,11 +209,11 @@ main {
   font-size: 0.85rem !important;
 }
 
-.my-cv:active {
+.animated-btn:active {
   border-color: transparent !important;
 }
 
-.my-cv:hover {
+.animated-btn:hover {
   letter-spacing: 2px;
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -221,13 +221,14 @@ main {
   color: var(--white) !important;
 }
 
-.my-cv::before {
+.animated-btn::before {
   content: '';
   position: absolute;
   bottom: 0;
   left: calc(50% - 1rem);
   width: 2rem;
   height: 100%;
+  padding: 0 2rem;
   z-index: 1;
   opacity: 0;
   transition: all 0.3s ease;
@@ -236,10 +237,11 @@ main {
   transform: scale(0.1, 1);
 }
 
-.my-cv:hover::before {
+.animated-btn:hover::before {
   opacity: 1;
-  width: 10rem;
-  left: calc(50% - 5rem);
+  left: 0;
+  left: -1rem;
+  width: calc(100% + 2rem);
   transform: scale(1, 1);
 }
 
@@ -347,18 +349,52 @@ main {
 
 .tech-stack {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
 }
 
 .tech-item {
-  height: 7rem;
-  border-radius: 0.5rem;
+  height: 8rem;
   background-color: rgba(248, 211, 148, 0.05);
+  transition: var(--transistion-275ms);
+}
+
+.tech-item:nth-child(even) {
+  background-color: rgba(248, 211, 148, 0.1);
+}
+
+.tech-item:nth-child(odd):hover {
+  background-color: rgba(248, 211, 148, 0.1);
+}
+
+.tech-item img {
+  height: 2.5rem;
 }
 
 .tech-item span {
   font-size: 0.9rem;
+}
+
+/* PORTFOLIO SECTION */
+
+.project-item img {
+  height: 15rem;
+  background-size: cover;
+}
+
+.project-links a,
+.project-links a:hover {
+  color: var(--text-gray) !important;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  transition: var(--transistion-275ms);
+}
+
+.project-links a:hover {
+  background-color: rgba(248, 211, 148, 0.1);
+  color: var(--lightyellow) !important;
+}
+
+.project-links span {
 }
 
 /* Keyframes */
