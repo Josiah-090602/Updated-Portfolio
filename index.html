@@ -20,6 +20,7 @@
 </head>
 <body>
     <!-- Navigation Bar -->
+    <div class="position-fixed" id="alert-feedback"></div>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid justify-content-center">
           <a class="nav-logo position-absolute" href="#hero">
@@ -74,7 +75,7 @@
                   </div>
                   <span id="cursor"></span>
                 </div>
-                <a href="mycv/mycv.pdf" class="btn fw-medium rounded-0 px-4 py-2 mt-4 animated-btn" tabindex="0" aria-selected="true" aria-controls="page" target="_blank" rel="noopener noreferrer">
+                <a href="mycv/mycv.pdf" class="btn rounded-0 px-4 py-2 mt-4 animated-btn" tabindex="0" aria-selected="true" aria-controls="page" target="_blank" rel="noopener noreferrer">
                   Download CV
                 </a>
               </div>
@@ -176,10 +177,16 @@
               <!-- PROJECT 1 -->
               <div class="project-item d-flex align-items-center gap-4">
                 <img src="img/projects/attendance-ms.png" alt="">
-                <div class="d-flex flex-column">
-                  <p class="text-lightyellow">Attendance Monitoring System</p>
-                  <span class="fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A culpa deleniti officia nostrum voluptatibus quia voluptatum unde corporis est sint repudiandae quae in repellat deserunt illo, impedit obcaecati consequuntur possimus?</span>
-                  <div class="project-links mt-4 d-flex gap-2">
+                <div class="d-flex gap-3 flex-column">
+                  <p class="text-lightyellow fw-medium mb-0">Attendance Monitoring System</p>
+                  <span class="fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A culpa deleniti officia nostrum voluptatibus quia voluptatum unde corporis est sint repudiandae quae in repellat deserunt.</span>
+                  <div class="tech-used d-flex gap-2">
+                    <div><i class="fa-brands fa-html5"></i></div>
+                    <div><i class="fa-brands fa-css3-alt"></i></div>
+                    <div><i class="fa-brands fa-square-js"></i></div>
+                    <div><i class="fa-brands fa-bootstrap"></i></div>
+                  </div>
+                  <div class="project-links mt-2 d-flex gap-2">
                     <a href="" class="btn d-flex gap-2 align-items-center px-3 fs-7">
                       Code
                       <span class="material-symbols-outlined fs-6">
@@ -197,10 +204,16 @@
               </div>
               <!-- PROJECT 2 -->
               <div class="project-item d-flex align-items-center gap-4">
-                <div class="d-flex flex-column">
-                  <p class="text-lightyellow">Attendance Monitoring System</p>
-                  <span class="fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A culpa deleniti officia nostrum voluptatibus quia voluptatum unde corporis est sint repudiandae quae in repellat deserunt illo, impedit obcaecati consequuntur possimus?</span>
-                  <div class="project-links mt-4 d-flex gap-2">
+                <div class="d-flex flex-column gap-3">
+                  <p class="text-lightyellow fw-medium mb-0">Attendance Monitoring System</p>
+                  <span class="fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A culpa deleniti officia nostrum voluptatibus quia voluptatum unde corporis est sint repudiandae quae in repellat deserunt.</span>
+                  <div class="tech-used d-flex gap-2">
+                    <div><i class="fa-brands fa-html5"></i></div>
+                    <div><i class="fa-brands fa-css3-alt"></i></div>
+                    <div><i class="fa-brands fa-square-js"></i></div>
+                    <div><i class="fa-brands fa-bootstrap"></i></div>
+                  </div>
+                  <div class="project-links mt-2 d-flex gap-2">
                     <a href="" class="btn d-flex gap-2 align-items-center px-3 fs-7">
                       Code
                       <span class="material-symbols-outlined fs-6">
@@ -217,6 +230,34 @@
                 </div>
                 <img src="img/projects/attendance-ms.png" alt="">
               </div>
+              <!-- PROJECT 3 -->
+              <div class="project-item d-flex align-items-center gap-4">
+                <img src="img/projects/attendance-ms.png" alt="">
+                <div class="d-flex flex-column gap-3">
+                  <p class="text-lightyellow fw-medium mb-0">Attendance Monitoring System</p>
+                  <span class="fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A culpa deleniti officia nostrum voluptatibus quia voluptatum unde corporis est sint repudiandae quae in repellat deserunt.</span>
+                  <div class="tech-used d-flex gap-2">
+                    <div><i class="fa-brands fa-html5"></i></div>
+                    <div><i class="fa-brands fa-css3-alt"></i></div>
+                    <div><i class="fa-brands fa-square-js"></i></div>
+                    <div><i class="fa-brands fa-bootstrap"></i></div>
+                  </div>
+                  <div class="project-links mt-2 d-flex gap-2">
+                    <a href="" class="btn d-flex gap-2 align-items-center px-3 fs-7">
+                      Code
+                      <span class="material-symbols-outlined fs-6">
+                        open_in_new
+                      </span>
+                    </a>
+                    <a href="" class="btn d-flex gap-2 align-items-center px-3 fs-7">
+                      Preview
+                      <span class="material-symbols-outlined fs-6">
+                        open_in_new
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -224,37 +265,46 @@
         <section id="contact" class="page-section min-vh-100">
           <div class="py-4 w-100">
             <p class="header-title fs-5 mb-5 fw-medium">GET IN TOUCH</p>
-            <form id='contact-form' class="d-flex w-100 flex-column justify-content-center align-items-center gap-4">
+            <form id="contact-form" class="d-flex w-100 flex-column justify-content-center align-items-center gap-4">
               <div class="d-flex my-4 w-100 gap-4">
                 <div class="contact-input w-50">
                   <input class="form-control rounded-0" id="user_name" name="user_name" type="text" placeholder="a">
-                  <label for="name" class="mb-1">Name</label>
+                  <label for="user_name" class="mb-1">Name</label>
                 </div>
                 <div class="contact-input w-50">
                   <input class="form-control rounded-0" id="contact_number" name="contact_number" type="text" placeholder="a">
-                  <label for="phone" class="mb-1">Phone</label>
+                  <label for="contact_number" class="mb-1">Phone</label>
                 </div>
               </div>
               <div class="d-flex w-100 gap-4">
                 <div class="contact-input w-50">
                   <input class="form-control rounded-0" id="user_email" name="user_email" type="email" placeholder="a">
-                  <label for="email" class="mb-1">Email</label>
+                  <label for="user_email" class="mb-1">Email</label>
                 </div>
                 <div class="contact-input w-50">
                   <input class="form-control rounded-0" id="subject" name="subject" type="text" placeholder="a">
                   <label for="subject" class="mb-1">Subject</label>
                 </div>
               </div>
-              <div class="contact-input mt-4 w-100">
+              <div class="contact-input position-relative mt-4 w-100">
                 <textarea class="form-control rounded-0 w-100" name="message" id="message" rows="5" placeholder="a"></textarea>
                 <label for="message">Message</label>
+                <span class="loading position-absolute material-symbols-outlined">
+                  refresh
+                </span>
               </div>
-              <button class="send-message btn rounded-0 fw-medium px-4 py-2 animated-btn" type="submit">Send now</button>
+              <input class="send-message rounded-0 mt-2 fw-medium px-4" type="submit" value="Send now">
             </form>
           </div>
         </section>
-        <section class="footer">
-
+        <section class="footer w-100 py-5">
+          <div class="d-flex my-3 align-items-center text-gray gap-2 fs-7 justify-content-center">
+            <span class="material-symbols-outlined">
+              copyright
+            </span>
+            <p class="mb-0">Josiah B. Viernes</p>
+            <p id="curr-year" class="mb-0"></p>
+          </div>
         </section>
       </main>
 </body>

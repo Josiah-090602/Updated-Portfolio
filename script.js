@@ -8,7 +8,8 @@ const contactLink = document.querySelector('.nav-item:last-child')
 // contact form
 const contactInputs = document.querySelectorAll(['.contact-input input', '.contact-input textarea'])
 const form = document.getElementById('contact-form')
-
+const sendLoad = document.querySelector('.loading')
+const closeAlert = document.querySelector('.btn-close')
 
 document.addEventListener('scroll', () => {
   if (window.scrollY > nav.offsetHeight) {
@@ -147,3 +148,71 @@ contactInputs.forEach((inp, i) => {
     }
   })
 })
+
+const alertPlaceholder = document.getElementById('alert-feedback')
+
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML =
+    `<div class="alert alert-${type} alert-dismissible fade show" role="alert">
+      <div class="d-flex align-items-center gap-3">
+        <span class="material-symbols-outlined">
+          ${type == 'success' ? 'check_circle' : 'error'}
+        </span>
+        ${message}
+      </div>
+    </div>`
+
+  alertPlaceholder.append(wrapper)
+}
+
+const removeAlert = () => {
+  const alertElement = document.querySelector('.alert');
+  if (alertElement) {
+    alertElement.remove();
+  }
+};
+
+emailjs.init("-iSjS0ukwtGQvCOmJ");
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  const templateParams = {
+    to_name: 'Josiah',
+    from_name: form.user_name.value,
+    message: form.message.value
+  };
+
+  emailjs.send('service_s7bixdo', 'template_q2u3iif', templateParams, "-iSjS0ukwtGQvCOmJ")
+    .then((result) => {
+      clearInputs()
+      appendAlert('The message has been sent successfully!', 'success')
+      sendLoad.classList.remove('rotate')
+      setTimeout(() => {
+        removeAlert()
+      }, 2000);
+    })
+    .catch((error) => {
+      clearInputs()
+      appendAlert('Failed to send the message!', 'danger')
+      sendLoad.classList.remove('rotate')
+    });
+  sendLoad.classList.add('rotate')
+};
+
+form.addEventListener('submit', sendEmail)
+
+const clearInputs = () => {
+  contactInputs.forEach(inp => {
+    inp.value = ''
+  })
+  contactInputs.forEach((inp, i) => {
+    inp.style.borderBottomColor = '#6e7181'
+    if (i === contactInputs.length - 1) {
+      inp.style.borderColor = '#6e7181'
+    }
+  })
+}
+
+document.getElementById('curr-year').textContent = new Date().getFullYear()
