@@ -52,6 +52,7 @@
   color: var(--text-gray) !important;
   font-size: 0.9rem !important;
   transition: var(--transistion-175ms);
+  font-weight: 300;
 }
 
 .nav-link.active,
@@ -316,7 +317,7 @@ main {
 .header-title::before {
   content: '';
   position: absolute;
-  width: 25%;
+  width: 2rem;
   bottom: -0.5rem;
   height: 2px;
   border-radius: 1px;
@@ -394,7 +395,64 @@ main {
   color: var(--lightyellow) !important;
 }
 
-.project-links span {
+/* CONTACT SECTION */
+
+.contact-input {
+  position: relative;
+}
+
+.contact-input label {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  position: absolute;
+  top: 0.6rem;
+  left: 1rem;
+  transition: var(--transistion-275ms);
+}
+
+.contact-input input,
+.contact-input input:focus,
+.contact-input textarea,
+.contact-input textarea:focus {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom-color: var(--text-gray);
+  box-shadow: none;
+  color: var(--white);
+  padding: 0.5rem 1rem !important;
+  font-size: 0.9rem;
+  transition: var(--transistion-275ms);
+}
+
+.contact-input textarea {
+  border-color: var(--text-gray);
+}
+
+.contact-input input::placeholder,
+.contact-input textarea::placeholder {
+  opacity: 0;
+}
+
+.contact-input textarea:focus {
+  border-color: var(--lightyellow);
+}
+
+.contact-input input:focus {
+  border-bottom-color: var(--lightyellow);
+}
+
+.contact-input input:focus ~ label,
+.contact-input textarea:focus ~ label,
+.contact-input input:not(:placeholder-shown) ~ label,
+.contact-input textarea:not(:placeholder-shown) ~ label {
+  top: -1.5rem;
+  left: 0;
+  font-size: 0.8rem;
+}
+
+#contact .animated-btn {
+  width: max-content;
+  height: 2.5rem;
 }
 
 /* Keyframes */

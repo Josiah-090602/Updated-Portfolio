@@ -5,6 +5,11 @@ const nav = document.querySelector('.navbar')
 const navbar = document.querySelector('.navbar-nav')
 const contactLink = document.querySelector('.nav-item:last-child')
 
+// contact form
+const contactInputs = document.querySelectorAll(['.contact-input input', '.contact-input textarea'])
+const form = document.getElementById('contact-form')
+
+
 document.addEventListener('scroll', () => {
   if (window.scrollY > nav.offsetHeight) {
     nav.classList.add('scrolled')
@@ -132,6 +137,13 @@ const removeActiveClasses = () => {
   })
 }
 
-
-
-
+contactInputs.forEach((inp, i) => {
+  inp.addEventListener('change', (e) => {
+    if (e.target.value !== '') {
+      inp.style.borderBottomColor = '#f8d394'
+      if (i === contactInputs.length - 1) {
+        inp.style.borderColor = '#f8d394'
+      }
+    }
+  })
+})
