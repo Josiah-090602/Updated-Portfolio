@@ -22,6 +22,11 @@ document.addEventListener('scroll', () => {
 bars.addEventListener("click", () => {
   navbar.classList.toggle('expanded')
   bars.classList.toggle('active')
+  if (navbar.classList.contains('expanded')) {
+    nav.classList.remove('scrolled')
+  } else {
+    nav.classList.add('scrolled')
+  }
 })
 
 // minimize the navbar when clicked outside
@@ -173,25 +178,31 @@ const removeAlert = () => {
   }
 };
 
-emailjs.init("-iSjS0ukwtGQvCOmJ");
+emailjs.init("Qi2TfNRvyPfSGPuWy");
 
 const sendEmail = (e) => {
   e.preventDefault();
 
   const templateParams = {
+    subject: form.subject.value || '(no subject)',
     to_name: 'Josiah',
     from_name: form.user_name.value,
-    message: form.message.value
+    message:
+      `${form.message.value}
+    
+      Phone Number: ${form.contact_number.value || 'None'}
+      Email Address: ${form.user_email.value}
+    `
   };
 
-  emailjs.send('service_s7bixdo', 'template_q2u3iif', templateParams, "-iSjS0ukwtGQvCOmJ")
+  emailjs.send('service_517km4e', 'template_dihy1f5', templateParams, "Qi2TfNRvyPfSGPuWy")
     .then((result) => {
       clearInputs()
       appendAlert('The message has been sent successfully!', 'success')
       sendLoad.classList.remove('rotate')
       setTimeout(() => {
         removeAlert()
-      }, 2000);
+      }, 3000);
     })
     .catch((error) => {
       clearInputs()

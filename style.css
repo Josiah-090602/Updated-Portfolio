@@ -80,6 +80,7 @@ main {
   height: 2rem;
   top: 1.5rem;
   padding: 0 0.5rem !important;
+  border: none !important;
 }
 
 .material-symbols-outlined {
@@ -419,8 +420,18 @@ main {
 
 /* CONTACT SECTION */
 
+.input-row,
+#contact-form {
+  gap: 1.5rem;
+}
+
+.input-row:first-child {
+  margin: 1.5rem 0;
+}
+
 .contact-input {
   position: relative;
+  width: 50%;
 }
 
 .contact-input label {
@@ -503,6 +514,8 @@ main {
   backdrop-filter: blur(10px) !important;
   border: 1px solid rgb(40, 167, 69) !important;
   color: var(--white) !important;
+  border-radius: 0 !important;
+  border-left: 5px solid rgb(40, 167, 69) !important;
 }
 
 #alert-feedback .alert-success span {
@@ -515,6 +528,8 @@ main {
   backdrop-filter: blur(10px) !important;
   border: 1px solid rgb(255, 0, 0) !important;
   color: var(--white) !important;
+  border-radius: 0 !important;
+  border-left: 5px solid rgb(255, 0, 0) !important;
 }
 
 #alert-feedback .alert-danger span {
@@ -562,16 +577,24 @@ main {
   }
 }
 
-/* Media Queries */
+/* MEDIUM SCREENS */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
+  #about,
+  #resume,
+  #portfolio,
+  #contact {
+    padding: 0 20vw;
+    margin: 0;
+  }
+
   .navbar-nav {
     transition: var(--transistion-375ms);
     background-color: var(--background);
     height: 0;
     overflow: hidden;
     left: 0;
-    top: calc(var(--navbar-height) - 2px);
+    top: calc(4rem - 2px);
     position: absolute;
     width: 100%;
   }
@@ -589,7 +612,6 @@ main {
   .navbar {
     position: relative;
     margin: 0;
-    background-color: var(--background);
   }
 
   .nav-logo {
@@ -599,25 +621,63 @@ main {
   .name {
     font-size: 2.2rem !important;
   }
+
+  .project-item {
+    flex-direction: column;
+  }
+
+  .project-item:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
+  .project-item img {
+    height: auto;
+    width: 100%;
+    background-size: cover;
+  }
+  #contact {
+    min-height: auto !important;
+  }
 }
 
-@media screen and (max-width: 500px) {
-  #hero,
+/* SMALL SCREENS */
+
+@media screen and (max-width: 767.98px) {
   #about,
   #resume,
   #portfolio,
   #contact {
-    padding: 0 1rem;
+    padding: 0 10vw;
     margin: 0;
-  }
-  .navbar {
-    height: 4rem;
   }
   .media-accounts {
     width: 14rem;
     flex-direction: row !important;
     bottom: 1rem;
     left: calc(50% - 7rem);
+  }
+  #alert-feedback {
+    width: 90vw;
+    left: 5vw;
+  }
+  #alert-feedback .alert-success,
+  #alert-feedback .alert-danger {
+    font-size: 0.9rem;
+  }
+}
+
+/* EXTRA SMALL SCREENS */
+
+@media screen and (max-width: 575.98px) {
+  #about,
+  #resume,
+  #portfolio,
+  #contact {
+    padding: 0 2rem;
+    margin: 0;
+  }
+  .navbar {
+    height: 4rem;
   }
 
   .bars {
@@ -639,5 +699,35 @@ main {
 
   .education-item div p:last-child {
     color: var(--white) !important;
+  }
+
+  .tech-stack {
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  }
+
+  .tech-item {
+    height: 5rem;
+  }
+
+  .tech-item img {
+    height: 1.7rem;
+  }
+
+  .tech-item span {
+    font-size: 0.8rem;
+  }
+
+  .input-row {
+    flex-direction: column;
+    margin-bottom: 0 !important;
+  }
+
+  #contact-form,
+  .input-row {
+    gap: 2rem !important;
+  }
+
+  .contact-input {
+    width: 100% !important;
   }
 }
