@@ -66,7 +66,7 @@ function typeWriter(sentence, containerId, callback) {
 }
 
 const sentences = [
-  'Fullstack Developer',
+  'Aspiring Fullstack Developer',
   'UI/UX designer',
   'Freelancer',
 ];

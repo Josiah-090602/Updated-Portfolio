@@ -362,7 +362,7 @@ main {
 
 .tech-item {
   height: 8rem;
-  background-color: rgba(248, 211, 148, 0.05);
+  background-color: #f8d3940d;
   transition: var(--transistion-275ms);
 }
 
@@ -384,7 +384,7 @@ main {
 
 /* PORTFOLIO SECTION */
 
-.project-item img {
+.project-item .project-img {
   height: 15rem;
   background-size: cover;
 }
