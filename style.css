@@ -141,7 +141,7 @@ main {
 #hero {
   justify-content: center;
   color: var(--white);
-  background-image: url("/img/hero-background.png");
+  background-image: url("/img/hero-background\ .png");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -270,16 +270,12 @@ main {
   transform: scale(1, 1);
 }
 
-.media-accounts {
-  bottom: 0;
-  left: -5vw;
-}
 
 .media-accounts a {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
