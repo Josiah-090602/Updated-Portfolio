@@ -276,15 +276,31 @@ main {
 }
 
 /* ABOUT SECTION */
+
+.main-about{
+  gap: .7rem;
+}
+
+.profile-con{
+  width: 30%;
+}
+
 .profile {
-  background: rgb(17,18,23);
+width: 100%;
+background: rgb(17,18,23);
 background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(0,0,0,0.5691526610644257) 91%);
 }
 
 .details-con{
-  flex-grow: 1;
-  text-align: justify;
+  width: 70%;
   font-size: .8rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.details-con p{
+  text-align: justify;
+  font-size: .9rem;
 }
 
 .details-con h2{
@@ -299,18 +315,16 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
   font-size: 1.1rem;
 }
 
-.info-item p{
-  width: auto;
+.details-con::before{
+  content: '';
+  height: 100%;
+  position: absolute;
+  background-color: var(--light-bg);
+  width: 4px;
+  left: 0;
+  border-right: rgb(248, 211, 148, .6) 2px solid;
 }
 
-.info-item .material-symbols-outlined{
-  font-size: .8rem;
-  padding-top: 3px;
-}
-.info-item .info-label{
-  color: var(--lightyellow);
-  width: 100px;
-}
 
 
 
@@ -404,11 +418,16 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
 }
 
 .tech-stack {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  grid-gap: 1em ; */
+  gap: 1rem;
+  justify-content: center;
 }
 
 .tech-item {
+  width: 10rem;
   height: 8rem;
   background-color: #f8d3940d;
   transition: var(--transistion-275ms);
@@ -418,9 +437,16 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
   background-color: rgba(248, 211, 148, 0.1);
 }
 
-.tech-item:nth-child(odd):hover {
+.tech-item:nth-child(even):hover{
+  transform: translateY(-10px);
+  background-color: #f8d3940d;
+}
+.tech-item:nth-child(odd):hover{
+  transform: translateY(-10px);
   background-color: rgba(248, 211, 148, 0.1);
 }
+
+
 
 .tech-item img {
   height: 2.5rem;
@@ -450,6 +476,7 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
 }
 
 
+
 .tech-used div {
   border-radius: 50%;
   background-color: rgba(248, 211, 148, 0.05);
@@ -462,6 +489,10 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
 
 .tech-used i {
   color: var(--lightyellow);
+}
+
+.tech-used img{
+  max-width: 15px;
 }
 
 .project-links a,
@@ -640,6 +671,43 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
 
 /* MEDIUM SCREENS */
 
+@media screen and (max-width:1234px) {
+  
+  .profile-con{
+    display: none;
+  }
+
+  .profile{
+    display: none !important;
+    width: 150px;
+    border-radius: 100px;
+    box-shadow: 
+      0 0 0 5px var(--light-bg),
+      0 0 0 7px rgb(248, 211, 148, 0.6);
+  }
+
+  .details-con{
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 1.3rem;
+  }
+
+  .details-con p{
+    font-size: .7rem;
+  }
+
+  .details-con::before{
+    content: '';
+    height: 100%;
+    position: absolute;
+    background-color: var(--light-bg);
+    width: 4px;
+    left: 0px;
+    border-right: rgb(248, 211, 148, .6) 2px solid;
+  }
+
+}
+
 @media screen and (max-width: 1024px) {
   #about,
   #resume,
@@ -683,8 +751,24 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
     font-size: 2.2rem !important;
   }
 
+  .main-about{
+    flex-direction: column;
+  }
+  
   .project-item {
     flex-direction: column;
+  }
+
+  
+  .tech-item {
+    width: 8rem;
+    height: 6rem;
+    background-color: #f8d3940d;
+    transition: var(--transistion-275ms);
+  }
+
+  .tech-item img{
+    height: 2rem;
   }
 
   .project-item:nth-child(even) {
@@ -717,6 +801,7 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
     bottom: 1rem;
     left: calc(50% - 7rem);
   }
+  
   #alert-feedback {
     width: 90vw;
     left: 5vw;
@@ -725,7 +810,10 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
   #alert-feedback .alert-danger {
     font-size: 0.9rem;
   }
+
+ 
 }
+
 
 /* EXTRA SMALL SCREENS */
 
@@ -757,7 +845,9 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
     font-size: 0.8rem;
     color: var(--text-gray);
   }
-
+  .animated-btn{
+    width: 100%;
+  }
   .education-item div p:last-child {
     color: var(--white) !important;
   }
