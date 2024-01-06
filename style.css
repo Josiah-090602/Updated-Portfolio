@@ -362,8 +362,7 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
   z-index: 1;
   opacity: 0;
   transition: all 0.3s ease;
-  border-top: 1px solid rgba(248, 211, 148, 0.5);
-  border-bottom: 1px solid rgba(248, 211, 148, 0.5);
+  border: 1px solid rgba(248, 211, 148, 0.5);
   transform: scale(0.1, 1);
 }
 
@@ -372,7 +371,7 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
   left: 0;
   left: -1rem;
   width: calc(100% + 2rem);
-  transform: scale(.89, 1);
+  transform: scale(.86, 1);
 }
 
 /* RESUME SECTION */
@@ -512,9 +511,49 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
 
 /* CONTACT SECTION */
 
+
+.personal-info{
+  width: 50%;
+  border: solid 1px rgb(248, 211, 148, .6);
+}
+
+.info-item{
+  margin-top: 20px;
+  height: 35px;
+  gap: 1rem;
+  background-color: var(--light-bg);
+  position: relative;
+  
+}
+
+
+.info-item a{
+  margin: 0;
+  font-size: .8rem;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.info-item span{
+  width: 35px;
+  height: 35px;
+  background-color: #f8d394;
+  color: var(--background);
+  text-align: center;
+}
+.info-item i{
+  margin-top: 9px;
+}
+
 .input-row,
 #contact-form {
-  gap: 1.5rem;
+  gap: 2rem;
+}
+
+.contact-wrapper form{
+  padding: 10px;
+  width: 60%;
+  border: solid 1px rgb(248, 211, 148, .6);
 }
 
 .input-row:first-child {
@@ -538,7 +577,7 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
 .contact-input input,
 .contact-input input:focus,
 .contact-input textarea,
-.contact-input textarea:focus {
+.contact-input textarea:focus{
   background-color: transparent;
   border-color: transparent;
   border-bottom-color: var(--text-gray);
@@ -551,6 +590,12 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
 
 .contact-input textarea {
   border-color: var(--text-gray);
+
+}
+
+.contact-input label i {
+  font-size: .8rem;
+  margin-right: 8px !important;
 }
 
 .contact-input input::placeholder,
@@ -569,10 +614,11 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
 .contact-input input:focus ~ label,
 .contact-input textarea:focus ~ label,
 .contact-input input:not(:placeholder-shown) ~ label,
-.contact-input textarea:not(:placeholder-shown) ~ label {
-  top: -1.5rem;
+.contact-input textarea:not(:placeholder-shown) ~ label{
+  top: -1.3rem;
   left: 0;
   font-size: 0.8rem;
+  color: #f8d394;
 }
 
 .loading {
@@ -880,5 +926,8 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
 
   .contact-input {
     width: 100% !important;
+  }
+  .contact-input label {
+    font-size: 0.7rem;
   }
 }

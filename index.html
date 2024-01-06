@@ -374,41 +374,75 @@
         </section>
         <!-- Contact Section -->
         <section id="contact" class="page-section min-vh-100 d-flex align-items-center ">
-          <div class="py-4 w-100">
+          <div class="py-4 w-100 d-flex flex-column ">
             <p class="header-title fs-5 mb-md-5 mb-4 fw-medium">GET IN TOUCH</p>
-            <form id="contact-form" class="d-flex w-100 flex-column justify-content-center align-items-center">
-              <div class="input-row d-flex w-100">
-                <div class="contact-input">
-                  <input class="form-control rounded-0" id="user_name" name="user_name" type="text" placeholder="a" required>
-                  <label for="user_name">Name</label>
+
+            <div class="contact-wrapper d-flex ">
+              <div class="personal-info d-flex flex-column p-3 ">
+                <p>Contact Information</p>
+
+                <div class="info-item w-100 d-flex align-items-center ">
+                  <span>
+                    <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                  </span>
+                  
+                  <a href="mailto: viernesjosiah6@gmail.com">viernesjosiah6@gmail.com</a>
                 </div>
-                <div class="contact-input">
-                  <input class="form-control rounded-0" id="contact_number" name="contact_number" type="text" placeholder="a">
-                  <label for="contact_number">Phone</label>
+
+                <div class="info-item w-100 d-flex align-items-center ">
+                  <span>
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                  </span>
+                  
+                  <a href="tel: +63-946-165-1222">+63 946 165 1222</a>
+                </div>
+
+                <div class="info-item w-100 d-flex align-items-center ">
+                  <span>
+                    <i class="fa fa-location-dot" aria-hidden="true"></i>
+                  </span>
+                  
+                  <a href="">ICS Pawa Lajon Bulan Sorsogon</a>
                 </div>
               </div>
-              <div class="input-row d-flex w-100">
-                <div class="contact-input">
-                  <input class="form-control rounded-0" id="user_email" name="user_email" type="email" placeholder="a" required>
-                  <label for="user_email">Email</label>
+
+              <form id="contact-form" class="d-flex flex-column justify-content-center align-items-center">
+                <div class="input-row d-flex w-100">
+                  <div class="contact-input">
+                    <input class="form-control rounded-0" id="user_name" name="user_name" type="text" placeholder="a" required>
+                    <label for="user_name"><i class="fa fa-user" aria-hidden="true"></i> Name</label>
+                  </div>
+                  <div class="contact-input">
+                    <input class="form-control rounded-0" id="contact_number" name="contact_number" type="text" placeholder="a">
+                    <label for="contact_number"><i class="fa fa-mobile-phone" aria-hidden="true"></i>Phone</label>
+                  </div>
                 </div>
-                <div class="contact-input">
-                  <input class="form-control rounded-0" id="subject" name="subject" type="text" placeholder="a">
-                  <label for="subject">Subject</label>
+                <div class="input-row d-flex w-100">
+                  <div class="contact-input">
+                    <input class="form-control rounded-0" id="user_email" name="user_email" type="email" placeholder="a" required>
+                    <label for="user_email"><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
+                  </div>
+                  <div class="contact-input">
+                    <input class="form-control rounded-0" id="subject" name="subject" type="text" placeholder="a">
+                    <label for="subject"><i class="fa fa-bullseye" aria-hidden="true"></i>Subject</label>
+                  </div>
                 </div>
+                <div class="contact-input position-relative mt-2 mt-md-4 w-100">
+                  <textarea class="form-control rounded-0 w-100" name="message" id="message" rows="5" placeholder="a" required></textarea>
+                  <label for="message"><i class="fa-solid fa-message"></i> Message</label>
+                  <span class="loading position-absolute material-symbols-outlined">
+                    refresh
+                  </span>
+                </div>
+                <div class="w-100 d-flex  justify-content-end ">
+                <input class="send-message rounded-0 fw-medium px-4" type="submit" value="Send now">
               </div>
-              <div class="contact-input position-relative mt-2 mt-md-4 w-100">
-                <textarea class="form-control rounded-0 w-100" name="message" id="message" rows="5" placeholder="a" required></textarea>
-                <label for="message">Message</label>
-                <span class="loading position-absolute material-symbols-outlined">
-                  refresh
-                </span>
-              </div>
-              <input class="send-message rounded-0 mt-2 fw-medium px-4" type="submit" value="Send now">
-            </form>
+              </form>
+            </div>
+            
           </div>
         </section>
-        <section class="footer w-100 py-5">
+        <section class="footer w-100 py-2">
           <div class="d-flex my-3 align-items-center text-gray gap-2 fs-7 justify-content-center">
             <span class="material-symbols-outlined">
               copyright
