@@ -141,7 +141,7 @@ main {
 #hero {
   justify-content: center;
   color: var(--white);
-  background-image: url("/img/hero-background\ .png");
+  background-image: url("/img/hero-background.png");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -183,7 +183,7 @@ main {
   border: solid 2px var(--lightyellow);
 }
 
-.hero-wrapper h1 {
+.hero-wrapper h2 {
   font-size: 4rem;
   background: -webkit-linear-gradient(
     90deg,
@@ -193,6 +193,7 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
+  font-size: 3.5rem;
 }
 
 .text-area {
@@ -514,25 +515,36 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
 
 .personal-info{
   width: 50%;
-  border: solid 1px rgb(248, 211, 148, .6);
+  gap: 20px !important;
+}
+
+.personal-info p{
+  margin-bottom: 0;
+  
 }
 
 .info-item{
-  margin-top: 20px;
+  text-decoration: none;
   height: 35px;
   gap: 1rem;
   background-color: var(--light-bg);
   position: relative;
+  font-size: .8rem;
+  color: var(--white);
+  position: relative;
+}
+
+.info-item::before{
   
 }
 
-
-.info-item a{
-  margin: 0;
-  font-size: .8rem;
-  text-decoration: none;
-  color: var(--white);
+.info-item:hover{
+  content: '';
+  background-color: rgb(248, 211, 148, .2);
+  width: 100%;
+  transition: var(--transistion-375ms);
 }
+
 
 .info-item span{
   width: 35px;
@@ -551,9 +563,19 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
 }
 
 .contact-wrapper form{
-  padding: 10px;
-  width: 60%;
-  border: solid 1px rgb(248, 211, 148, .6);
+  padding: 1rem;
+  width: 50%;
+  position: relative;
+}
+
+.contact-wrapper form::before{
+  content: '';
+  background-color: var(--light-bg);
+  height: 100%;
+  width: 4px;
+  position: absolute;
+  left: -3px;
+  border-right: 2px solid rgb(248, 211, 148, 0.6);
 }
 
 .input-row:first-child {
@@ -751,6 +773,27 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
     left: 0px;
     border-right: rgb(248, 211, 148, .6) 2px solid;
   }
+  .contact-wrapper{
+    flex-direction: column-reverse;
+  }
+
+  .contact-wrapper form::before{
+    display: none;
+  }
+
+  .personal-info{
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  #contact-form{
+    width: 100%;
+  }
+
+  .personal-info .media-accounts{
+    width: 100%;
+  }
+  
 
 }
 
@@ -794,7 +837,7 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
   }
 
   .name {
-    font-size: 2.2rem !important;
+    font-size: 3rem !important;
   }
 
   .main-about{
@@ -826,6 +869,8 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
     width: 100%;
     background-size: cover;
   }
+
+  
   #contact {
     min-height: auto !important;
   }
@@ -847,6 +892,7 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
     bottom: 1rem;
     left: calc(50% - 7rem);
   }
+
   
   #alert-feedback {
     width: 90vw;
@@ -873,6 +919,15 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
   }
   .navbar {
     height: 4rem;
+  }
+
+  .name {
+    font-size: 2rem !important;
+  }
+
+  #typer {
+    color: var(--white);
+    font-size: .8rem;
   }
 
   .bars {
@@ -930,4 +985,11 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
   .contact-input label {
     font-size: 0.7rem;
   }
+
+  .send-message {
+    height: 2.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  
 }
