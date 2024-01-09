@@ -71,15 +71,17 @@
                     </span>
                   </div>
                   <span id="cursor"></span>
-                </div>
-                
-
-                <div class="media-accounts d-flex align-items-center justify-content-center">
+                  
+                  <div class="media-accounts d-flex align-items-center justify-content-center">
                   <div class="accounts d-flex flex-md-row flex-row align-items-center justify-content-center gap-4">
                     <a href="https://www.facebook.com/josiah.borjaviernes" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://github.com/Josiah-090602" target="_blank"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/josiah-viernes-95a899252/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                   </div>
+                </div>
+                
+
+                
                 </div>
               </div>
               <a href="#portfolio" class="my-projects text-decoration-none p-0 d-none d-md-flex gap-4 position-absolute">
@@ -95,11 +97,11 @@
           <div class="py-4 w-100 ">
             <p class="header-title fs-5 fw-medium">GET TO KNOW MORE</p>
             
-            <div class="main-about d-flex w-100 my-4 ">
-              <div class="profile-con">
+            <div class="main-about d-flex w-100 my-4">
+              <div class="profile-con hidden">
                 <img class="profile" src="/img/Profile.png" alt="">
               </div>
-              <div class="details-con d-flex flex-column justify-content-evenly ">
+              <div class="details-con d-flex flex-column justify-content-evenly hidden">
                 <h2>Hello, I'm Josiah Viernes</h2>
                 <h4>An Aspiring Fullstack Developer</h4>
                 <p>Aspiring BSIT student seeking an opportunity to apply and expand my knowledge in a dynamic learning environment. Eager to leverage myacademic background, passion for programming, and a strong willingness to learn to contribute effectively to an innovative team.</p>
@@ -120,7 +122,7 @@
         <section id="resume" class="page-section d-flex flex-column min-vh-100">
           <div class="education py-4 w-100">
             <p class="header-title fs-5 mb-5 fw-medium">MY EDUCATION</p>
-            <div class="education-content py-4 d-flex gap-4 flex-column w-100">
+            <div class="education-content py-4 d-flex gap-4 flex-column w-100 hidden">
               <div class="education-item px-4 d-flex justify-content-md-between justify-content-center align-items-start align-items-md-center flex-md-row flex-column">
                 <div class="flex flex-column">
                   <p class="mb-2 fs-7">SENIOR HIGH SCHOOL</p>
@@ -179,7 +181,7 @@
           
 
           <div class="skills py-4">
-            <p class="header-title fs-5 mb-5 fw-medium">WHAT I WANT TO LEARN</p>
+            <p class="header-title fs-5 mb-5 fw-medium hidden">WHAT I WANT TO LEARN</p>
             <div class="tech-stack">
               <div class="tech-item gap-2 gap-md-3 d-flex flex-column align-items-center justify-content-center">
                 <img src="img/skills/developing skills/nextjs.svg" alt="">
@@ -212,10 +214,10 @@
         <!-- Portfolio Section -->
         <section id="portfolio" class="page-section min-vh-100">
           <div class="py-4">
-            <p class="header-title fs-5 mb-5 fw-medium">MY PROJECTS</p>
+            <p class="header-title fs-5 mb-5 fw-medium hidden">MY PROJECTS</p>
             <div class="d-flex flex-column gap-5">
               <!-- PROJECT 1 -->
-              <div class="project-item d-flex align-items-center gap-4">
+              <div class="project-item d-flex align-items-center gap-4 hidden">
                 <div class="projectimg-con">
                   <img class="project-img" src="img/projects/attendance-ms.png" alt="">
                 </div>
@@ -248,7 +250,7 @@
                 </div>
               </div>
               <!-- PROJECT 2 -->
-              <div class="project-item d-flex align-items-center gap-4">
+              <div class="project-item d-flex align-items-center gap-4 hidden">
                 <div class="d-flex flex-column gap-3">
                   <p class="text-lightyellow fw-medium mb-0">Library Management System</p>
                   <span class="fs-7">In this project, I contributed as a back-end developer to the creation of a Library Management System using the OutSystems platform. This experience significantly advanced my skills in logical statement formulation, data analysis, and data manipulation in programming. As a key team member, I played a crucial role in enhancing the system's efficiency and functionality, gaining valuable insights into the intricacies of software development while honing my expertise in back-end technologies.</span>
@@ -279,7 +281,7 @@
                 </div>
               </div>
               <!-- PROJECT 3 -->
-              <div class="project-item d-flex align-items-center gap-4">
+              <div class="project-item d-flex align-items-center gap-4 hidden">
                 <div class="projectimg-con">
                   <img class="project-img" src="img/projects/first-portfolio.png" alt="">
                 </div>
@@ -309,7 +311,7 @@
                 </div>
               </div>
               <!-- PROJECT 4 -->
-              <div class="project-item d-flex align-items-center gap-4">
+              <div class="project-item d-flex align-items-center gap-4 hidden">
                 <div class="d-flex flex-column gap-3">
                   <p class="text-lightyellow fw-medium mb-0">Odin Project - Recipe</p>
                   <span class="fs-7">In this project from The Odin Project course, I strengthened my understanding of JavaScript DOM and honed my skills in utilizing Bootstrap 5 for responsive design. This hands-on experience marked a pivotal moment in my coding journey, enhancing my proficiency in web development.</span>
@@ -339,7 +341,7 @@
                 </div>
               </div>
               <!-- PROJECT 5 -->
-              <div class="project-item d-flex align-items-center gap-4">
+              <div class="project-item d-flex align-items-center gap-4 hidden">
                 <div class="projectimg-con">
                   <img class="project-img" src="img/projects/weather-app.png" alt="">
                 </div>
@@ -375,10 +377,10 @@
         <!-- Contact Section -->
         <section id="contact" class="page-section min-vh-100 d-flex align-items-center ">
           <div class="py-4 w-100 d-flex flex-column ">
-            <p class="header-title fs-5 mb-md-5 mb-4 fw-medium">GET IN TOUCH</p>
+            <p class="header-title fs-5 mb-md-5 mb-4 fw-medium hidden">GET IN TOUCH</p>
 
             <div class="contact-wrapper d-flex ">
-              <div class="personal-info d-flex flex-column p-3 justify-content-evenly ">
+              <div class="personal-info d-flex flex-column p-3 justify-content-evenly hidden">
                 <p>Contact Information</p>
 
                 <a href="" class="info-item d-flex align-items-center ">
@@ -418,7 +420,7 @@
 
               </div>
 
-              <form id="contact-form" class="d-flex flex-column justify-content-center align-items-center">
+              <form id="contact-form" class="d-flex flex-column justify-content-center align-items-center hidden">
                 <div class="input-row d-flex w-100">
                   <div class="contact-input">
                     <input class="form-control rounded-0" id="user_name" name="user_name" type="text" placeholder="a" required>

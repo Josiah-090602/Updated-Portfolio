@@ -4,6 +4,20 @@ const bars = document.querySelector('.bars')
 const nav = document.querySelector('.navbar')
 const navbar = document.querySelector('.navbar-nav')
 const contactLink = document.querySelector('.nav-item:last-child')
+const hiddenItems = document.querySelectorAll('.hidden')
+
+//intersectionObsever
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry)=>{
+    console.log(entry)
+    if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+    }
+  })
+})
+
+hiddenItems.forEach((el)=> observer.observe(el))
 
 // contact form
 const contactInputs = document.querySelectorAll(['.contact-input input', '.contact-input textarea'])

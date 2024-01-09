@@ -297,6 +297,7 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
   font-size: .8rem;
   position: relative;
   padding-left: 1rem;
+  transition-delay: 150ms !important;
 }
 
 .details-con p{
@@ -382,6 +383,7 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
   width: max-content;
   height: max-content;
 }
+
 
 .header-title::before {
   content: '';
@@ -532,6 +534,7 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
   font-size: .8rem;
   color: var(--white);
   position: relative;
+
 }
 
 .info-item::before{
@@ -566,6 +569,7 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
   padding: 1rem;
   width: 50%;
   position: relative;
+  transition-delay: 200ms !important;
 }
 
 .contact-wrapper form::before{
@@ -704,6 +708,23 @@ background: radial-gradient(circle, rgba(17,18,23,0.7316176470588236) 54%, rgba(
 .footer div span {
   font-size: 1rem;
 }
+
+
+/* ScrollAnimation */
+
+.hidden{
+  opacity:0;
+  filter: blur(10px);
+  transform: translateX(-2rem);
+  transition: all 1s;
+}
+
+.show{
+  opacity:1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 
 /* Keyframes */
 
